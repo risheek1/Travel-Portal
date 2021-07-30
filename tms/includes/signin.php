@@ -42,17 +42,17 @@ echo "<script type='text/javascript'> document.location = 'package-list.php'; </
 											</div>
 									<div class="login-right">
 										<form method="post">
-											<h3>Signin with your account </h3>
+											<h3 style="color:black;">Signin with your account </h3>
 	<input type="text" name="email" id="email" placeholder="Enter your Email"  required="">	
 	<input type="password" name="password" id="password" placeholder="Password" value="" required="">	
-											<h4><a href="forgot-password.php">Forgot password</a></h4>
+											<h4><a href="forgot-password.php" style="color:blue;">Forgot password</a></h4>
 											
-											<input type="submit" name="signin" value="SIGNIN">
+											<input type="submit" name="signin" value="SIGNIN" style="background-color:blue;">
 										</form>
 									</div>
 									<div class="clearfix"></div>								
 								</div>
-								<p>By logging in you agree to our <a href="page.php?type=terms">Terms and Conditions</a> and <a href="page.php?type=privacy">Privacy Policy</a></p>
+								<p style="color:black;">By logging in you agree to our <a href="page.php?type=terms">Terms and Conditions</a> and <a href="page.php?type=privacy">Privacy Policy</a></p>
 							</div>
 						</div>
 					</div>

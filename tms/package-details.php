@@ -39,7 +39,7 @@ $error="Something went wrong. Please try again";
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/stp.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -82,9 +82,9 @@ $error="Something went wrong. Please try again";
 <body>
 <!-- top-header -->
 <?php include('includes/header.php');?>
-<div class="banner-3">
+<div class="banner-3" style="margin-top:-194px;height:350px;">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS -Package Details</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> </h1>
 	</div>
 </div>
 <!--- /banner ---->
@@ -130,7 +130,7 @@ foreach($results as $result)
 						<div class="clearfix"></div>
 				<div class="grand">
 					<p>Grand Total</p>
-					<h3>USD.800</h3>
+					<h3 style="color:black;">INR. <?php echo htmlentities($result->PackagePrice);?></h3>
 				</div>
 			</div>
 		<h3>Package Details</h3>
@@ -149,7 +149,7 @@ foreach($results as $result)
 					<?php if($_SESSION['login'])
 					{?>
 						<li class="spe" align="center">
-					<button type="submit" name="submit2" class="btn-primary btn">Book</button>
+					<button type="submit" name="submit2" class="btn btn" style="background-color:blue;">Book</button>
 						</li>
 						<?php } else {?>
 							<li class="sigi" align="center" style="margin-top: 1%">

@@ -39,7 +39,7 @@ $error="Something went wrong. Please try again";
 <meta name="keywords" content="Tourism Management System In PHP" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/stp.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -76,16 +76,17 @@ $error="Something went wrong. Please try again";
 <!-- top-header -->
 <div class="top-header">
 <?php include('includes/header.php');?>
-<div class="banner-1 ">
+<div class="banner-1 " style="height:250px;margin-top:-150px;height:400px;">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"></h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
 <!--- privacy ---->
 <div class="privacy">
 	<div class="container">
-		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Enquiry Form Password</h3>
+		<h3 class="wow fadeInDown animated animated" style="color:black;margin-left:350px;font-size:3.2rem">Enquiry Form Password</h3>
+		<hr style="width:100%;margin-bottom:40px;"/>
 		<form name="enquiry" method="post">
 		 <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>

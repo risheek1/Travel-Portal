@@ -1,31 +1,22 @@
-<div class="header-main">
-					<div class="logo-w3-agile">
-								<h1><a href="dashboard.php">Tourism Management System</a></h1>
-							</div>
-				
-						
-						<div class="profile_details w3l">		
-								<ul>
-									<li class="dropdown profile_details_drop">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-											<div class="profile_img">	
-												<span class="prfil-img"><img src="images/User-icon.png" alt=""> </span> 
-												<div class="user-name">
-													<p>Welcome</p>
-													<span>Administrator</span>
-												</div>
-												<i class="fa fa-angle-down"></i>
-												<i class="fa fa-angle-up"></i>
-												<div class="clearfix"></div>	
-											</div>	
-										</a>
-										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							
-				     <div class="clearfix"> </div>	
-				</div>
+	<style>
+			.navbar { background-color: #484848; }
+.navbar .navbar-nav .nav-link { color: #fff; }
+.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+	</style>
+	<nav class="navbar navbar-expand-lg" style="height:130px;">
+		<div class="container">
+		<h1>	<a class="navbar-brand text-white" href="#">Travel admin portal</a></h1>
+
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="nvbCollapse" style="margin-left:740px;">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item pl-1"> <a class="nav-link" href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> 
+
+                     <li class="nav-item pl-1" style="margin-left:40px;"> <a class="nav-link" href="logout.php"><i class="fa fa-sign-out"></i> Sign out</a> </li> 
+				</ul>
+			</div>
+		</div>
+	</nav>
+

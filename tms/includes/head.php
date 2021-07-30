@@ -20,7 +20,7 @@
 <div class="top-header" style="background-color:black;height:60px;">
 	<div class="container">
 		<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
-			<li class="hm"><a href="index.php"></a></li>
+			<li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
 				<li><a href="admin/index.php" id="">Admin Login</a></li>
 		</ul>
 		<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s"> 
@@ -37,7 +37,7 @@
 <div class="header">
 	<div class="container">
 		<div class="logo " data-wow-delay=".5s">
-		<span class="w" style="margin-top:40px;"><a href="index.php">Tours and Travels</a>	</span>
+		<span class="w" style="margin-top:40px;"><a href="index.php">Tours  Travels</a>	</span>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -45,7 +45,6 @@
 </div>
 <!--- /header ---->
 <!--- footer-btm ---->
-<ul class="menu-bar" id="t"> <li><a href="index.php">Home</a></li> <li><a href="page.php?type=About%20Us">About</a></li> <li ><a href="package-list.php">Tour Packages</a></li> <li ><a href="page.php?type=Privacy">Privacy Policy</a></li> <li ><a href="page.php?type=Terms%20and%20Conditions">Terms of Use</a></li> <li><a href="page.php?type=Contact">Contact Us</a></li> <?php if($_SESSION['login']) {?> <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>  </li> <?php } else { ?> <li><a href="enquiry.php"> Enquiry </a>  </li> <?php } ?> <div class="clearfix"></div> </ul>
 
 
 				<!-- Collect the nav links, forms, and other content for toggling -->

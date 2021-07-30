@@ -10,8 +10,18 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Admin Dashboard</title>
+<title>Admin Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	.navbar { background-color: #484848; }
+.navbar .navbar-nav .nav-link { color: #fff; }
+.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+
+footer a.text-light:hover { color: #fed136!important; text-decoration: none; }
+footer .cizgi { border-right: 1px solid #535e67; }
+@media (max-width: 992px) { footer .cizgi { border-right: none; } }
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Bootstrap Core CSS -->
@@ -36,15 +46,27 @@ else{
 <div class="left-content">
 	   <div class="mother-grid-inner">
 <!--header start here-->
-<?php include('includes/header.php');?>
-<!--header end here-->
-		<ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a> <i class="fa fa-angle-right"></i></li>
-            </ol>
-<!--four-grids here-->
+	<nav class="navbar navbar-expand-lg" style="height:130px;">
+		<div class="container">
+		<h1>	<a class="navbar-brand text-white" href="#">Travel admin portal</a></h1>
+
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="nvbCollapse" style="margin-left:740px;">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item pl-1"> <a class="nav-link" href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> 
+
+                     <li class="nav-item pl-1" style="margin-left:40px;"> <a class="nav-link" href="logout.php"><i class="fa fa-sign-out"></i> Sign out</a> </li> 
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+<h1 style="margin-left:40%;color:black;margin-bottom:30px;">Dashboard</h1>
 		<div class="four-grids">
 					<div class="col-md-3 four-grid">
-						<div class="four-agileits">
+						<div class="four-agileits" style="background-color:grey;border-radius:8px;">
 							<div class="icon">
 								<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
 							</div>
@@ -64,7 +86,7 @@ $cnt=$query->rowCount();
 						</div>
 					</div>
 					<div class="col-md-3 four-grid">
-						<div class="four-agileinfo">
+						<div class="four-agileinfo" style="background-color:grey;border-radius:8px;">
 							<div class="icon">
 								<i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i>
 							</div>
@@ -83,7 +105,7 @@ $cnt1=$query1->rowCount();
 						</div>
 					</div>
 					<div class="col-md-3 four-grid">
-						<div class="four-w3ls">
+						<div class="four-w3ls" style="background-color:grey;border-radius:8px;">
 							<div class="icon">
 								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
 							</div>
@@ -102,7 +124,7 @@ $cnt2=$query2->rowCount();
 						</div>
 					</div>
 					<div class="col-md-3 four-grid">
-						<div class="four-wthree">
+						<div class="four-wthree" style="background-color:grey;border-radius:8px;">
 							<div class="icon">
 								<i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i>
 							</div>
@@ -125,7 +147,7 @@ $cnt3=$query3->rowCount();
 
 		<div class="four-grids">
 					<div class="col-md-3 four-grid">
-						<div class="four-w3ls">
+						<div class="four-w3ls" style="background-color:grey;border-radius:8px;">
 							<div class="icon">
 								<i class="glyphicon glyphicon-folder-open" aria-hidden="true"></i>
 							</div>
@@ -155,7 +177,6 @@ $cnt5=$query5->rowCount();
 </div>
 <!--inner block end here-->
 <!--copy rights start here-->
-<?php include('includes/footer.php');?>
 </div>
 </div>
 
@@ -192,61 +213,6 @@ $cnt5=$query5->rowCount();
 <!-- morris JavaScript -->	
 <script src="js/raphael-min.js"></script>
 <script src="js/morris.js"></script>
-<script>
-	$(document).ready(function() {
-		//BOX BUTTON SHOW AND CLOSE
-	   jQuery('.small-graph-box').hover(function() {
-		  jQuery(this).find('.box-button').fadeIn('fast');
-	   }, function() {
-		  jQuery(this).find('.box-button').fadeOut('fast');
-	   });
-	   jQuery('.small-graph-box .box-close').click(function() {
-		  jQuery(this).closest('.small-graph-box').fadeOut(200);
-		  return false;
-	   });
-	   
-	    //CHARTS
-	    function gd(year, day, month) {
-			return new Date(year, month - 1, day).getTime();
-		}
-		
-		graphArea2 = Morris.Area({
-			element: 'hero-area',
-			padding: 10,
-        behaveLikeLine: true,
-        gridEnabled: false,
-        gridLineColor: '#dddddd',
-        axes: true,
-        resize: true,
-        smooth:true,
-        pointSize: 0,
-        lineWidth: 0,
-        fillOpacity:0.85,
-			data: [
-				{period: '2014 Q1', iphone: 2668, ipad: null, itouch: 2649},
-				{period: '2014 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
-				{period: '2014 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
-				{period: '2014 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
-				{period: '2015 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
-				{period: '2015 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
-				{period: '2015 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
-				{period: '2015 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
-				{period: '2016 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
-				{period: '2016 Q2', iphone: 8442, ipad: 5723, itouch: 1801}
-			],
-			lineColors:['#ff4a43','#a2d200','#22beef'],
-			xkey: 'period',
-            redraw: true,
-            ykeys: ['iphone', 'ipad', 'itouch'],
-            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
-			pointSize: 2,
-			hideHover: 'auto',
-			resize: true
-		});
-		
-	   
-	});
-	</script>
 </body>
 </html>
 <?php } ?>

@@ -85,17 +85,23 @@ return true;
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
+#t
+{
+	opacity:0;
+}
 		</style>
+<script type="text/javascript">
+	document.getElementById("t").opacity=0;
+</script>
 </head>
 <body>
 <!-- top-header -->
+<?php include('includes/head.php');?>
+
 <div class="top-header">
-<?php include('includes/header.php');?>
 <div class="banner-1 ">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
-	</div>
-</div>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">T&T Travel Portal</div>
 <!--- /banner-1 ---->
 <!--- privacy ---->
 <div class="privacy">

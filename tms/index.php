@@ -6,16 +6,18 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Tourism Management System</title>
+<title>Tours And Travels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/st.css" rel='stylesheet' type='text/css' />
+<link href="css/stp.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
+      rel="stylesheet">
 <link href="css/font-awesome.css" rel="stylesheet">
 <!-- Custom Theme files -->
 <script src="js/jquery-1.12.0.min.js"></script>
@@ -23,6 +25,16 @@ include('includes/config.php');
 <!--animate-->
 <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
 <script src="js/wow.min.js"></script>
+<style>
+	button:hover
+	{
+		color:white;
+	}
+	button
+	{
+		color:black;
+	}
+</style>
 	<script>
 		 new WOW().init();
 	</script>
@@ -30,52 +42,15 @@ include('includes/config.php');
 </head>
 <body>
 <?php include('includes/header.php');?>
-<div class="banner">
+<div class="banner" style="margin-top:-194px;height:350px;">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Tourism Management System</h1>
+		
 	</div>
 </div>
 
 
 <!--- rupes ---->
-<div class="container">
-	<div class="rupes">
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-usd"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>UP TO USD. 50 OFF</h3>
-				<h4><a href="offers.html">TRAVEL SMART</a></h4>
-				
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-h-square"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>UP TO 70% OFF</h3>
-				<h4><a href="offers.html">ON HOTELS ACROSS WORLD</a></h4>
-				
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-mobile"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>FLAT USD. 50 OFF</h3>
-				<h4><a href="offers.html">US APP OFFER</a></h4>
-			
-			</div>
-				<div class="clearfix"></div>
-		</div>
-	
-	</div>
-</div>
+
 <!--- /rupes ---->
 
 
@@ -89,9 +64,10 @@ include('includes/config.php');
 
 
 	
-	<h3>Package List</h3>
-
-					
+	<h1 style="margin-left:450px;font-style:Verona;color:black;font-size:4rem;font-weight:1600;">BEST HOLIDAY PACKAGES</h1>
+<hr style="width:100%;margin-bottom:150px;"></hr>
+<!-- Container -->
+<!-- ./Container -->					
 <?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
 $query = $dbh->prepare($sql);
 $query->execute();
@@ -101,23 +77,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {	?>
-			<div class="rom-btm">
-				<div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-					<img src="admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>" class="img-responsive" alt="">
-				</div>
-				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
-					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
-					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
-				</div>
-				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
-					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-
+			<div class="container mt-32 mx-auto p-4 md:p-0"> <!-- Card wrapper --> <div class="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto"> <!-- Card image --> <div class="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative" style="background-image:url('admin/pacakgeimages/<?php echo htmlentities($result->PackageImage);?>')"> <div class="absolute text-xl"> <i class="fa fa-heart text-white hover:text-red-light ml-4 mt-4 cursor-pointer"></i> </div> </div> <!-- ./Card image --> <!-- Card body --> <div class="bg-white w-full md:w-2/3"> <!-- Card body - outer wrapper --> <div class="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative"> <!-- Card body - inner wrapper --> <div class="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center"> <!-- Card title and subtitle --> <div class="w-full lg:w-1/5 lg:border-right lg:border-solid text-center md:text-left"> <bold><h3 style="color:black;"><?php echo htmlentities($result->PackageName);?></h3></bold> <p class="mb-0 mt-3 text-grey-dark text-sm italic"><?php echo htmlentities($result->PackageLocation);?></p> <hr class="w-1/4 md:ml-0 mt-4 border lg:hidden"> </div> <!-- ./Card title and subtitle --> <!-- Card description --> <div class="w-full lg:w-3/5 lg:px-3" style="width:960px;"> <p class="text-md mt-4 lg:mt-0 text-justify md:text-left text-sm"> <?php echo htmlentities($result->PackageDetails);?> <br/>Special Features : <?php echo htmlentities($result->PackageFetures);?> </p> </div> <!-- ./Card description --> <!-- Call to action button --> <div class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left"> <div class="text-lg text-gray-700"><span class="text-gray-900 font-bold">INR  <?php echo htmlentities($result->PackagePrice);?></span> per person*</div> <div class="text-gray-600 ml-2 text-sm md:text-base mt-1">28 reviews</div><a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>"> <button class="bg-grey hover:bg-black-darker hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2" style="background-color:blue;"><b>Visit now</b></button></a> </div> <!-- ./Call to action button --> </div> <!-- ./Card body - inner wrapper --> </div> <!-- ./Card body - outer wrapper --> </div> <!-- ./Card body --> </div> <!-- ./Card wrapper --> </div>
 <?php }} ?>
 			
 		
@@ -128,42 +88,7 @@ foreach($results as $result)
 
 
 
-<!--- routes ---->
-<div class="routes">
-	<div class="container">
-		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
-			<div class="rou-left">
-				<a href="#"><i class="glyphicon glyphicon-list-alt"></i></a>
-			</div>
-			<div class="rou-rgt wow fadeInDown animated" data-wow-delay=".5s">
-				<h3>80000</h3>
-				<p>Enquiries</p>
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 routes-left">
-			<div class="rou-left">
-				<a href="#"><i class="fa fa-user"></i></a>
-			</div>
-			<div class="rou-rgt">
-				<h3>1900</h3>
-				<p>Regestered users</p>
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 routes-left wow fadeInRight animated" data-wow-delay=".5s">
-			<div class="rou-left">
-				<a href="#"><i class="fa fa-ticket"></i></a>
-			</div>
-			<div class="rou-rgt">
-				<h3>7,00,00,000+</h3>
-				<p>Booking</p>
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-</div>
+
 
 <?php include('includes/footer.php');?>
 <!-- signup -->

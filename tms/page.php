@@ -33,13 +33,13 @@ $error="Something went wrong. Please try again";
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>TMS | Tourism Management System</title>
+<title>Tour and Travels Ltd.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Tourism Management System In PHP" />
-<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/stp.css" rel='stylesheet' type='text/css' />
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -74,11 +74,11 @@ $error="Something went wrong. Please try again";
 </head>
 <body>
 <!-- top-header -->
-<div class="top-header">
+<div class="top-header" >
 <?php include('includes/header.php');?>
-<div class="banner-1 ">
+<div class="banner-1 " style="height:350px;margin-top:-150px;">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"></h1>
 	</div>
 </div>
 <!--- /banner-1 ---->
@@ -101,10 +101,10 @@ foreach($results as $result)
 ?>
 
 
-		<h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;"><?php 	echo $_GET['type'] ?></h3>
+		<h1 style="margin-left:550px;font-weight:5100;color:black;"><?php 	echo $_GET['type'] ?></h1>
+		<hr style="width:100%;margin-bottom:130px;"/>
 		
-		
-	<p>
+	<p style="margin-bottom:120px;font-family: Arial, Helvetica, sans-serif;">
 	<?php 	echo $result->detail; ?>
 
 
